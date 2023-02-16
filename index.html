@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head><style>
+.button {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style></head>
+
+<body>
+
+<br/><center>
+<h1><p id='print'>RanDom</p></h1>
+
+<button class="button" onclick="generateString(6)">Get</button>
+</center><br/>
+
+<script>
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+	document.getElementById("print").innerHTML = result;
+}
+</script>
+
+</body>
+
+</html>
